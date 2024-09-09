@@ -131,24 +131,6 @@ def view_password():
         print("no password file found.")
 
 
-"""#reveal pass
-def reveal_password(account_name):
-    if os.path.exists('passwords.json'):
-        with open('passwords.json', 'r') as file:
-            data = json.load(file)
-        
-        if account_name in data:
-            pin_password = getpass.getpass("enter the pin")
-            if validiate_pin_password(pin_password):
-                encrypt_password = data[account_name]['password']
-                print("Decrypted pass: {decrypt_password(encrypted_password)}")
-            else:
-                print("invalid pin")
-        else:
-            print("no account found")
-    else:
-        print("no password found")"""
-
 #delete the password of a sepcific account
 def delete_password():
     if not verify_pin_password():
